@@ -1,6 +1,5 @@
 using System;
 namespace SetimaAtividade;
-
 public class Aluno
 {
     public string Nome;
