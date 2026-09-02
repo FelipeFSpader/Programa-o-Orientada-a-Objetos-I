@@ -3,12 +3,9 @@ namespace TerceiraAtividade;
 
 class InfosPessoa
 {
-    static void Main()
+    public static void Main()
     {
-        Pessoa luis = new Pessoa();
-        luis.Nome= "Luís";
-        luis.Idade= 19;
-        luis.Altura= 1.55;
+        Pessoa luis = new Pessoa("Luís", 19, 1.55);
 
         Console.WriteLine(luis.Apresentar());
     }
