@@ -1,7 +1,7 @@
 using System;
 namespace Empresax
 {
-    public  abstract class Funcionário:Pessoa 
+    public abstract class Funcionário:Pessoa 
     {
         public string Matricula{ get; set; }
         public decimal Salario{ get; set;}
