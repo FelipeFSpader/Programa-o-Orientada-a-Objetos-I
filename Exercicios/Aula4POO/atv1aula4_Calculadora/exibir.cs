@@ -13,11 +13,11 @@ public class Exibir
         // Usando try-catch para tratar a exceção da divisão por zero
         try
         {
-            console.WriteLine($"Dividir: {calc.Dividir(10, 0)}");
+            Console.WriteLine($"Dividir: {calc.Dividir(10, 0)}");
         }
         catch (DivideByZeroException ex)
         {
-            console.WriteLine($"Inválido - {ex.Message}");
+            Console.WriteLine($"Inválido - {ex.Message}");
         }
 
 
