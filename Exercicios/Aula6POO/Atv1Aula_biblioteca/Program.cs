@@ -1,68 +1,69 @@
 ﻿using System;
+
 namespace Biblioteca
 {
-    public static void Main()
+    class Program
     {
-        Pessoa p1 = new()
+        static void Main()
+        {
+            Pessoa p1 = new()
             {
-                //Forma de passar valores
-                Nome="Luís",
-                CPF="5432112345"
+                Nome = "Luís",
+                CPF = "5432112345"
             };
-            //objeto.método();
             p1.Apresentar();
 
             Cliente cli = new()
             {
-                Nome="Felipe",
-                CPF="123.123.45.22",
-                Matricula="ADM-001",
-                Salario=7500,
-                Setor="Financeiro"
+                Nome = "Felipe",
+                CPF = "123.123.45.22",
+                RegistroC = 1001 // Corrigido: Usando a propriedade real da classe Cliente
             };
             Console.WriteLine(" ");
             cli.Apresentar();
-            cli.Trabalhar();
+            cli.EmprestarLivros(); // Corrigido: Método correto da classe Cliente
 
-            Funcionário fu = new()
+            Funcionario fu = new() // Corrigido: Sem acento, nome exato da classe
             {
-                Nome="Spader",
-                CPF="123.456.789.11",
-                Matricula="OP123",
-                Area="Assistente de IA"
+                Nome = "Spader",
+                CPF = "123.456.789.11",
+                Salario = 4500 // Corrigido: Funcionario só tem a propriedade Salario
             };
             Console.WriteLine(" ");
             fu.Apresentar();
-            fu.Trabalhar();
+            fu.Executar(); // Corrigido: Método correto
 
             Autor au = new()
             {
-                Nome="Luisinho",
-                CPF="0987678456",
-                CodigoCliente="Cliente123",
+                Nome = "Luisinho",
+                CPF = "0987678456",
+                Editora = "Editora Tech" // Corrigido: Propriedade real de Autor
             };
             Console.WriteLine(" ");
             au.Apresentar();
-            au.comprar();
+            au.RegistrarObras(); // Corrigido: Método correto
 
             Auxiliar aux = new()
             {
-                Nome="Lipe",
-                CPF="8887776665554",
-                Empresa="PositivoLabs"  
+                Nome = "Lipe",
+                CPF = "8887776665554",
+                Salario = 2000,     // Herdado de Funcionario
+                Prateleiras = 5     // Propriedade real de Auxiliar (int)
             };
             Console.WriteLine(" ");
             aux.Apresentar();
-            aux.Fornecer();
+            aux.Executar(); // Corrigido: Executa o override de Auxiliar
 
-            bibliotecario bib = new()
+            Bibliotecario bib = new() // Corrigido: Letra maiúscula
             {
-                Nome="Lipe",
-                CPF="8887776665554",
-                Empresa="PositivoLabs"  
+                Nome = "Lipe",
+                CPF = "8887776665554",
+                Salario = 5500,     // Herdado de Funcionario
+                Secao = "Ficção Científica" // Corrigido: Propriedade real de Bibliotecario
             };
             Console.WriteLine(" ");
             bib.Apresentar();
-            bib.Fornecer();
+            bib.Executar(); // Corrigido: Executa o override de Bibliotecario
+        }
     }
 }
