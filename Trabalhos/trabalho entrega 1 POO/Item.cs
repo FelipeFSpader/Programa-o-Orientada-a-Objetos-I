@@ -1,6 +1,6 @@
 ﻿namespace trabalho_entrega_1_POO;
 
-public class Item
+public abstract class Item
 {
     private int codigo;
     private string nome = "";
@@ -68,7 +68,7 @@ public class Item
         return "Item";
     }
 
-    public virtual void VerPropridades() // : super()
+    public virtual void VerPropridades() // : super() = : base()
     {
         Console.WriteLine($"Código: {codigo}");
         Console.WriteLine($"Tipo    : {SaberTipo()}");
