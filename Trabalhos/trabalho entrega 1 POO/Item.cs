@@ -71,7 +71,7 @@ public abstract class Item
     public virtual void VerPropridades() // : super() = : base()
     {
         Console.WriteLine($"Código: {codigo}");
-        Console.WriteLine($"Tipo    : {SaberTipo()}");
+        Console.WriteLine($"Tipo: {SaberTipo()}");
         Console.WriteLine($"Nome: {nome}");
         Console.WriteLine($"Nível: {nivel}");
     }
